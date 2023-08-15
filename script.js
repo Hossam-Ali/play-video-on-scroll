@@ -66,7 +66,9 @@ function onVideoEnd() {
 function onVideoScroll() {
   const logo = document.getElementById('logo');
   const header = document.getElementById('heading');
+
   logo.classList.add('no-display');
+
   if (document.body.scrollTop === 0) {
     header.style.display = 'flex';
   } else {
