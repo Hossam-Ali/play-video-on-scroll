@@ -58,12 +58,18 @@ Components.forEach((item) => {
 });
 
 function onVideoEnd() {
-  const ele = document.getElementById('logo');
-  ele.classList.remove('no-display', 'fade-out');
-  ele.classList.add('fade-in');
+  const logo = document.getElementById('logo');
+  logo.classList.remove('no-display', 'fade-out');
+  logo.classList.add('fade-in');
 }
 
 function onVideoScroll() {
-  const ele = document.getElementById('logo');
-  ele.classList.add('no-display');
+  const logo = document.getElementById('logo');
+  const header = document.getElementById('heading');
+  logo.classList.add('no-display');
+  if (document.body.scrollTop === 0) {
+    header.style.display = 'flex';
+  } else {
+    header.style.display = 'none';
+  }
 }

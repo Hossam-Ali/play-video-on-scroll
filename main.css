@@ -17,6 +17,16 @@ body {
   font-family: sans-serif;
 }
 
+.heading {
+  color: white;
+  z-index: 9999;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
 .canvas-wrapper {
   position: fixed;
   top: 0;
