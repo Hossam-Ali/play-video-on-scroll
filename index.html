@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Play On Scroll</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <main>
+      <div class="canvas-wrapper">
+        <video
+          id="video"
+          muted
+          playsinline
+          preload="preload"
+          autobuffer="autobuffer"
+          onended="onVideoEnd()"
+        >
+          <source type="video/mp4" src="video.mp4" />
+        </video>
+        <canvas></canvas>
+      </div>
+      <section class="vh-100"></section>
+      <section class="vh-100"></section>
+      <section class="vh-100"></section>
+      <section class="vh-100"></section>
+      <section class="vh-100">
+        <img
+          src="logo.png"
+          width="200"
+          height="80"
+          class="logo no-display"
+          id="logo"
+        />
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
