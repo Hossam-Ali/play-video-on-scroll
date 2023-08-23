@@ -101,6 +101,7 @@ function isScrolledIntoView(el, scrolledVal) {
 function checkScrollDirection(e) {
   const isVisible = isScrolledIntoView(secondVideoContainer, 0);
   if (isVisible && !checkScrollDirectionIsUp(e)) {
+    // to do
   }
 }
 
