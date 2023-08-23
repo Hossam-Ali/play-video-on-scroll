@@ -59,7 +59,6 @@ const scrollableElement = document.body;
 const newComponent = new ScrollVideo(component);
 newComponent.init();
 
-scrollableElement.addEventListener('wheel', checkScrollDirection);
 firstVideo.addEventListener('timeupdate', firstVideoPlay);
 secondVideo.addEventListener('timeupdate', videoProgress);
 
@@ -76,38 +75,6 @@ function playVideo() {
 function pauseVideo() {
   secondVideo.pause();
   togglePlayPause();
-}
-
-// // Show Logo When Video Ends
-// function handleScroll() {
-//   const isSecondSectionVisible = isScrolledIntoView(secondVideoContainer, 0);
-
-//   if (isSecondSectionVisible) {
-//     logoContainer.style.visibility = 'visible';
-//     logoContainer.classList.add('animate__fadeInUp', 'logo');
-//   } else {
-//     logoContainer.style.visibility = 'hidden';
-//     logoContainer.classList.remove('animate__fadeInUp');
-//   }
-// }
-
-function isScrolledIntoView(el, scrolledVal) {
-  const rect = el.getBoundingClientRect();
-  const elemTop = rect.top;
-  const elemBottom = rect.bottom;
-  return elemTop - scrolledVal < window.innerHeight && elemBottom >= 0;
-}
-
-function checkScrollDirection(e) {
-  const isVisible = isScrolledIntoView(secondVideoContainer, 0);
-  if (isVisible && !checkScrollDirectionIsUp(e)) {
-    // to do
-  }
-}
-
-function checkScrollDirectionIsUp(e) {
-  if (e.wheelDelta) return e.wheelDelta > 0;
-  return e.deltaY < 0;
 }
 
 function videoProgress() {
